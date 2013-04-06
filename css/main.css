@@ -1,0 +1,37 @@
+body {
+	background-color:#FFFFFF;
+}
+
+textarea {
+	display:block;
+}
+
+div#canvasContainer {
+    resize:both;
+    display:inline-block;
+    width: 250px;
+    height: 250px;
+    overflow:auto;
+    background-color:#cccccc;
+}
+
+h5.control {
+	padding:0;
+	margin:5px;
+	text-align:center;
+}
+
+div#controls {
+	border: 1px solid black;
+	display:inline-block;
+	padding:8px;
+	vertical-align:top;
+}
+
+canvas#canvas1 {
+	border: 1px solid black;
+	margin-bottom:10px;
+	display:inline-block;
+	vertical-align:center;
+	background-color:#FFFFFF;
+}

@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Experiment</title>
+<script type="text/javascript" src="js/base64.js"></script>
+<script type="text/javascript" src="js/canvas2image.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<script>
+	var canvas;
+	var ctx;
+	var context;
+	
+	function init() {
+		canvas = document.getElementById('canvas1');
+		context = ctx = canvas.getContext("2d");
+		
+		//var img  = canvas.toDataURL("image/png");
+		//Canvas2Image.saveAsPNG(c);
+	}
+	
+	function draw1() {
+		ctx.fillStyle="#00cc66";
+		ctx.beginPath();
+		ctx.arc(20,20,20,0,2*Math.PI);
+		ctx.fill();
+	}
+	
+	function clearCanvas() {
+		ctx.clearRect ( 0 , 0 , canvas.width , canvas.height );
+	}
+	
+	function drawCurrent() {
+		canvas.width = $("#widthText").val();
+		canvas.height = $("#heightText").val();
+		clearCanvas();	
+		var width = canvas.width;
+		var height = canvas.height;
+		eval($("#text").val());
+	}
+	
+	function doEval() {
+		
+	}
+	
+	
+	function save() {
+		Canvas2Image.saveAsPNG(canvas);
+	}
+
+</script>
+
+
+</head>
+<body onload="init()">
+<div id="canvasContainer">
+<canvas id="canvas1" width="200" height="200" >
+Canvas is not supported
+</canvas>
+</div>
+<div id="controls">
+<h5 class="control">width</h5>
+<input id="widthText" value="200"/><br/>
+<h5 class="control">height</h5>
+<input id="heightText" value="200" /><br/>
+</div>
+
+<textarea id="text" rows="4" cols="50">
+
+</textarea>
+<button onclick="drawCurrent()">draw</button>
+<button onclick="save()">save</button>
+
+</body>
+</html>
