@@ -6,6 +6,16 @@ textarea {
 	display:block;
 }
 
+div#list {
+	resize:both;
+	overflow:auto;
+	width:200px;
+	height: 250px;
+	display:inline-block;
+	background-color:#cccccc;
+	vertical-align:top;
+}
+
 div#canvasContainer {
     resize:both;
     display:inline-block;
@@ -30,8 +40,8 @@ div#controls {
 
 canvas#canvas1 {
 	border: 1px solid black;
-	margin-bottom:10px;
-	display:inline-block;
+	display:block;
 	vertical-align:center;
 	background-color:#FFFFFF;
+	margin: 0px auto;
 }
